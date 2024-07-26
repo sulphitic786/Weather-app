@@ -5,7 +5,7 @@ import { BiHappy } from 'react-icons/bi';
 import { MdCompress, MdOutlineWaterDrop } from 'react-icons/md';
 
 const Detail = ({ weather, unit }) => {
-
+    console.log("object", weather)
     const tempUnit = unit === "metric" ? "°C" : "°F";
     const windUnit = unit === "metric" ? "m/s" : "mph";
     const card = [
@@ -48,7 +48,7 @@ const Detail = ({ weather, unit }) => {
             id: 6,
             icon: <FaWind />,
             title: "wind speed",
-            data: weather?.wind_speed?.toFixed(),
+            data: weather?.speed,
             unit: windUnit,
         },
     ];
@@ -77,7 +77,7 @@ Detail.propTypes = {
         feels_like: PropTypes.number,
         pressure: PropTypes.number,
         humidity: PropTypes.number,
-        wind_speed: PropTypes.number,
+        speed: PropTypes.number,
         description: PropTypes.string,
         iconURL: PropTypes.string,
         name: PropTypes.string,

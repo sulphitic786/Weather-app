@@ -78,7 +78,7 @@ Detail.propTypes = {
         pressure: PropTypes.number,
         humidity: PropTypes.number,
         speed: PropTypes.number,
-        description: PropTypes.string,
+        description: PropTypes.string, 
         iconURL: PropTypes.string,
         name: PropTypes.string,
         country: PropTypes.string,

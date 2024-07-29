@@ -8,15 +8,16 @@ const getFormatedData = async (city, units = "metric") => {
   const data = await fetch(URL)
     .then((res) => res.json())
     .then((data) => data);
-
+console.log("data1", data)
   
 if(data?.cod==200){
   const {
     weather,
     main: { temp, feels_like, temp_min, temp_max, pressure, humidity },
     wind: { speed },
-    sys: { country },
+    sys: { country, sunrise, sunset},
     name,
+    timezone,
     cod,
   } = data;
 
@@ -33,6 +34,9 @@ if(data?.cod==200){
     speed,
     country,
     name,
+    timezone,
+    sunrise,
+    sunset,
     cod,
   };
 }else{

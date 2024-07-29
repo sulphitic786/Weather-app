@@ -15,7 +15,7 @@ function App() {
     const fetchData = async () => {
       const data = await getFormatedData(city, unit);
       setWeather(data);
-
+console.log("data", data)
       const threshold = unit === "metric" ? 20 : 60;
       if (data.temp <= threshold) {
         setBackground(landscape4);
